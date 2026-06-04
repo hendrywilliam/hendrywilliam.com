@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myblog
+  namespace: myblog-ns
+  annotations:
+    haproxy.org/ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: prod
+  tls:
+    - hosts:
+        - hendrywilliam.com
+      secretName: myblog-tls
+  rules:
+    - host: hendrywilliam.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: myblog
+                port:
+                  number: 80
