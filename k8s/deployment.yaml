@@ -15,10 +15,11 @@ spec:
       labels:
         app: myblog
     spec:
+      runtimeClassName: gvisor
       containers:
         - name: app
           image: registry.hendrywilliam.com/hendrywilliam.com:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
           env:
