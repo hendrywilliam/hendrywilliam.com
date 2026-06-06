@@ -4,8 +4,11 @@ metadata:
   name: myblog
   namespace: myblog-ns
   annotations:
-    haproxy.org/ssl-redirect: "true"
     cert-manager.io/cluster-issuer: letsencrypt-prod
+    # Enable ssl-redirect when we arent using Cloudflare Tunnel.
+    # Disable when we are using Cloudflare Tunnel, this will fix too many redirection error.
+    haproxy.org/ssl-redirect: "false"
+    ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: prod
   tls:
