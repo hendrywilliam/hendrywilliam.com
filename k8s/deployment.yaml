@@ -15,7 +15,6 @@ spec:
       labels:
         app: myblog
     spec:
-      runtimeClassName: gvisor
       containers:
         - name: app
           image: registry.hendrywilliam.com/hendrywilliam.com:latest
