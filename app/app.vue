@@ -10,14 +10,14 @@ const experiences = [
 
 const projects = [
   {
-    name: "Oober",
+    name: "k8s-lab",
     description: "A collection of K8s Objects/Configurations.",
-    url: "https://github.com/hendrywilliam/oober",
+    url: "https://github.com/hendrywilliam/k8s-lab/",
   },
   {
     name: "Norma",
     description: "A platform for querying Indonesian legal documents.",
-    url: "https://github.com/hendrywilliam/oober",
+    url: "https://github.com/hendrywilliam/norma",
   },
   {
     name: "Dcbot",
@@ -60,7 +60,7 @@ const skills = [
   {
     title: "Cloud Infrastructure",
     description:
-      "Docker, Kubernetes, Linux Administration, Helm, HAProxy, Traefik, CertManager.",
+      "Docker, Kubernetes, Linux Administration, Helm, HAProxy, Traefik, CertManager, ArgoCD.",
   },
   {
     title: "Others",
@@ -102,7 +102,7 @@ const certifications = [
         <div class="flex flex-col gap-7 sm:gap-4">
           <p
             v-for="experience in experiences"
-            :key="experience.name"
+            :key="experience.title"
             class="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-neutral-100 sm:py-3"
           >
             <span>{{ experience.title }}</span>
