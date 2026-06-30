@@ -20,14 +20,10 @@ const projects = [
     url: "https://github.com/hendrywilliam/norma",
   },
   {
-    name: "Dcbot",
-    description: "A discord bot implementation from scratch.",
-    url: "https://github.com/hendrywilliam/dcbot",
-  },
-  {
-    name: "Ragdcbot",
-    description: "A simple discord bot with Retrieval-Augmented Generation.",
-    url: "https://github.com/hendrywilliam/ragdcbot",
+    name: "Minrouter",
+    description:
+      "A lightweight async reverse proxy, acts as a central entry point for all Pod traffic.",
+    url: "https://github.com/hendrywilliam/minrouter",
   },
 ];
 
