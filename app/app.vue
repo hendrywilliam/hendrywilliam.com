@@ -8,25 +8,6 @@ const experiences = [
   },
 ];
 
-const projects = [
-  {
-    name: "k8s-lab",
-    description: "A collection of K8s Objects/Configurations.",
-    url: "https://github.com/hendrywilliam/k8s-lab/",
-  },
-  {
-    name: "Norma",
-    description: "A platform for querying Indonesian legal documents.",
-    url: "https://github.com/hendrywilliam/norma",
-  },
-  {
-    name: "Minrouter",
-    description:
-      "A lightweight async reverse proxy, acts as a central entry point for all Pod traffic.",
-    url: "https://github.com/hendrywilliam/minrouter",
-  },
-];
-
 const writing = [
   {
     title: "Post Title One",
@@ -79,7 +60,7 @@ const certifications = [
     class="mx-auto max-w-[692px] px-6 py-12 font-inter antialiased sm:py-32 md:py-16"
   >
     <header class="mb-32 flex flex-col items-start">
-      <p class="inline-block font-medium no-underline">Hendri William T.</p>
+      <p class="inline-block font-medium no-underline">Hendri William</p>
       <!-- <span class="font-medium leading-none text-neutral-500">Software Developer</span> -->
     </header>
 
@@ -107,22 +88,6 @@ const certifications = [
               experience.description
             }}</span>
           </p>
-        </div>
-      </div>
-
-      <div class="-mb-3 mt-16 sm:mt-32">
-        <span class="mb-5 block font-medium sm:mb-4">Projects</span>
-        <div class="flex flex-col gap-7 sm:gap-4">
-          <a
-            v-for="project in projects"
-            :key="project.name"
-            :href="project.url"
-            target="_blank"
-            class="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-neutral-100 sm:py-3"
-          >
-            <span>{{ project.name }}</span>
-            <span class="text-neutral-500">{{ project.description }}</span>
-          </a>
         </div>
       </div>
 
