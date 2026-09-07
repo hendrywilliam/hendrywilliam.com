@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: registry.hendrywilliam.com/hendrywilliam.com:93aaa3d173e065d6c2a6e6962f8a3f8a8c5d52df
+          image: ns-registry-registry-svc.tail81c513.ts.net:5000/hendrywilliam.com:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000

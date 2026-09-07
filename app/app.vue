@@ -8,41 +8,18 @@ const experiences = [
   },
 ];
 
-const writing = [
-  {
-    title: "Post Title One",
-    description: "A short description of the post.",
-    url: "/writing/post-one",
-  },
-  {
-    title: "Post Title Two",
-    description: "A short description of the post.",
-    url: "/writing/post-two",
-  },
-];
-
 const skills = [
   {
     title: "Languages",
-    description: "Typescript, Golang, Python, SQL.",
-  },
-  {
-    title: "Frameworks",
-    description: "Next.js, Nuxt.js, Express.js, Gin, React.js, Vue.js.",
+    description: "Typescript, Golang, Python, SQL, Cypher (GraphDB)",
   },
   {
     title: "Databases",
-    description: "PostgreSQL, Redis.",
-  },
-  {
-    title: "Cloud Infrastructure",
-    description:
-      "Docker, Kubernetes, Linux Administration, Helm, HAProxy, Traefik, CertManager, ArgoCD.",
+    description: "PostgreSQL, Redis, Neo4j AuraDB (GraphDB)",
   },
   {
     title: "Others",
-    description:
-      "Github Actions (CI/CD), Cloudflare (R2, Worker, Domains, WAF), HTML, CSS, Tailwind, Pug, Sass, Git.",
+    description: "Docker, Kubernetes.",
   },
 ];
 
@@ -52,28 +29,29 @@ const certifications = [
     description: "Project Calico, issued Jun 2026.",
     url: "https://courses.academy.tigera.io/certificates/2de6066e2c754d84b4ee7aba704eb5b4",
   },
+  {
+    title: "Neo4j Certified Professional",
+    description:
+      "Covering graph database fundamentals, Cypher™ query statement, graph data modeling, nodes and relationship and database operations.",
+    url: "https://graphacademy.neo4j.com/c/e516dfa3-7162-42f8-97c0-f4e682086da6",
+  },
 ];
 </script>
 
 <template>
   <div
-    class="mx-auto max-w-[692px] px-6 py-12 font-inter antialiased sm:py-32 md:py-16"
+    class="mx-auto max-w-[692px] px-6 py-12 font-inter antialiased sm:py-32 md:py-16 text-justify"
   >
     <header class="mb-32 flex flex-col items-start">
       <p class="inline-block font-medium no-underline">Hendri William</p>
-      <!-- <span class="font-medium leading-none text-neutral-500">Software Developer</span> -->
     </header>
 
     <main>
-      <!-- <span class="mb-5 block font-medium sm:mb-6">Today</span> -->
       <p class="text-neutral-600">
         I am a software developer. My interests span across a range of fields,
         including web development, human-computer interaction, data, finance,
         and cloud computing.
       </p>
-      <!-- <p class="mt-4 text-neutral-600">
-        Previously, I worked at...
-      </p> -->
       <div class="-mb-3 mt-16 sm:mt-32">
         <span class="mb-5 block font-medium sm:mb-4">Experiences</span>
         <div class="flex flex-col gap-7 sm:gap-4">
@@ -90,22 +68,6 @@ const certifications = [
           </p>
         </div>
       </div>
-
-      <div class="-mb-3 mt-16 sm:mt-32">
-        <span class="mb-5 block font-medium sm:mb-4">Thoughts</span>
-        <div class="flex flex-col gap-7 sm:gap-4">
-          <a
-            v-for="post in writing"
-            :key="post.title"
-            :href="post.url"
-            class="-mx-3 flex flex-col rounded-md px-3 no-underline hover:bg-neutral-100 sm:py-3"
-          >
-            <span>{{ post.title }}</span>
-            <span class="text-neutral-500">{{ post.description }}</span>
-          </a>
-        </div>
-      </div>
-
       <div class="-mb-3 mt-16 sm:mt-32">
         <span class="mb-5 block font-medium sm:mb-4">Skills</span>
         <div class="flex flex-col gap-7 sm:gap-4">
@@ -134,19 +96,6 @@ const certifications = [
             <span class="text-neutral-500">{{ cert.description }}</span>
           </a>
         </div>
-      </div>
-
-      <div class="mt-16 sm:mt-32">
-        <!-- <span class="mb-5 block font-medium sm:mb-6">More</span> -->
-        <span class="text-neutral-600">
-          You can find all of my unfinished projects in
-          <a
-            class="underline"
-            href="https://github.com/hendrywilliam"
-            target="_blank"
-            >GitHub</a
-          >.
-        </span>
       </div>
     </main>
   </div>
